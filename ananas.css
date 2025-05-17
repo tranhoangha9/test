@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 5px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .header-icons a {
+    margin-left: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+header .search-box input {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.top-bar .header-icons a img{
+    margin-right: 4px ;
+    
+}
+.giua{
+    margin-bottom: 50px;
+    margin-left: 20px;
+
+}
+.banner {
+    text-align: center;
+    margin: 20px;
+    margin-right: 25px;
+}
+
+.banner img {
+    max-width: 70%;
+    height: auto;
+    width: 69%;
+}
+
+.giua-trai {
+    float: left;
+    display: flex;
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 30px;
+}
+.giua-trai aside a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.giua-trai aside {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.giua-trai aside ul{
+    list-style-type: none ;
+    padding: 0;
+}
+.giua-trai aside ul li {
+    margin: 10px 0;
+}
+.giua-trai aside ul li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sanphamtrai h2{
+    margin-left: 20px;
+    color: #f60;
+}
+.anhSanPham {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.img-container {
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.img-container img {
+    width: 100%;
+    height: 200px; 
+    object-fit: contain; 
+}
+  
+
+.img-container img {
+    height: 150px; 
+}
+
+.exchange-container {
+    text-align: center;
+    margin: 10px 0;
+    background-color: #f3f3f3;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exchange-text {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.exchange-text.fade-in {
+    opacity: 1;
+}
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.nutrai{
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Kích cỡ chữ lớn hơn */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 20px;
+    color: #8A8A8F;
+}
+.nutrai>button{
+    font-size: 18px;
+    
+}
+.nutrai:hover{
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+.sanphamtrai{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.nutSP{
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Kích cỡ chữ lớn hơn */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+hr{
+    border: none;
+    border-top: 2px solid #000;
+    margin: 10px 0;
+    margin-left: 20px;
+}
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.footer-column {
+    width: 16%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: #000;
+    border: none;
+    padding: 8px;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.subscribe-form button img {
+    width: 16px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85.5%;
+    margin-left: 65px;
+    align-items: center;
+    justify-items: center;
+}
+  
+.product-container p{
+    grid-column: span 2; /* Đặt thông báo vào toàn bộ chiều rộng của grid */
+    font-weight: bold;
+}
+.product-item {
+    flex-basis: calc(100% - 1px); /* Giảm 10px để tạo khoảng cách giữa các ảnh */
+    margin: 5px;
+    box-sizing: border-box;
+
+}
+.product-item img {
+    width: 483px;
+    height: 350px;
+    object-fit: cover;
+}
