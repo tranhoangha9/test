@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm cửa hàng</title>
+    <link rel="stylesheet" href="timcuahang.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="trangchu.html"><img src="icon asm/annanas.png" alt=""> </a>
+            </div>
+
+            <div class="header-icons">
+                <a href="ananas.html"><img src="icon asm/sanpham.png" alt=""> Sản Phẩm </a>
+                <a href="timcuahang.html"><img src="icon asm/marker.png" alt=""> Tìm cửa hàng</a>
+                <a href="dangnhap.html"><img src="icon asm/user.png" alt="">Đăng nhập</a>
+                <a href="giohang.html"><img src="icon asm/shopping-cart.png" alt=""> Giỏ hàng </a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm">
+            </div>
+        </div>
+        
+    </header>
+    <div class="container">
+        <h1>Tìm kiếm Cửa hàng</h1>
+        <select name="" id="">
+                <option selected>Thái Nguyên</option>
+                <option selected>Hà Nội</option>
+                <option selected>Thanh Hoá</option>
+                <option selected>Đà Nẵng</option>
+                <option selected>Thành phố Hồ Chí Minh</option>
+        </select>
+        <button onclick="searchStore()">Tìm kiếm</button>
+        <div id="searchResult"></div>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-column">
+            <h3>SẢN PHẨM</h3>
+            <ul>
+                <li><a href="#"> Nam</a></li>
+                <li><a href="#"> Nữ</a></li>
+                <li><a href="#">Thời trang & Phụ kiện</a></li>
+                <li><a href="#">Sale-off</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>HỖ TRỢ</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Bảo mật thông tin</a></li>
+                <li><a href="#">Chính sách chung</a></li>
+                <li><a href="#">Tra cứu đơn hàng</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>LIÊN HỆ</h3>
+            <ul>
+                <li><a href="#">Email góp ý</a></li>
+                <li><a href="#">Hotline</a></li>
+                <li>0819 470 836</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>ĐĂNG KÝ NHẬN MAIL</h3>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Nhập email của bạn">
+                <button>Send</button>
+            </div>
+        </div>
+    </footer>
+    <script src="timcuahang.js"></script>
+</body>
+</html>

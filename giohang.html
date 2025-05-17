@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="giohang.css">
+    
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+        <div class="logo">
+            <a href="trangchu.html"><img src="icon asm/annanas.png" alt=""> </a>
+        </div>
+
+        <div class="header-icons">
+            <a href="ananas.html"><img src="icon asm/sanpham.png" alt=""> Sản Phẩm </a>
+            <a href="timcuahang.html"><img src="icon asm/marker.png" alt=""> Tìm cửa hàng</a>
+            <a href="dangnhap.html"><img src="icon asm/user.png" alt="">Đăng nhập</a>
+            <a href="giohang.html"><img src="icon asm/shopping-cart.png" alt=""> Giỏ hàng </a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+    </div>
+</header>
+  <h1>Giỏ Hàng Của Bạn</h1>
+  <div id="products">
+      <button onclick="addToCart({name: 'Áo Nam 1', price: 100000, image: 'img/aonam1.jpg'})">Thêm Áo nam 1 <img src="img/aonam1.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo Nam 2', price: 250000, image: 'img/aonam2.jpg'})">Thêm Áo Nam 2 <img src="img/aonam2.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo Nam 3', price: 20000000, image: 'img/aonam3.jpg'})">Thêm Áo Nam 3 <img src="img/aonam3.jpg" alt=""></button>
+      
+      <button onclick="addToCart({name: 'Tất hồng', price: 10000, image: 'img/anhtat1.jpg'})">Thêm Tất hồng<img src="img/anhtat1.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Tất nâu', price: 10000, image: 'img/anhtat2.jpg'})">Thêm Tất nâu <img src="img/anhtat2.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Tất tím', price: 10000, image: 'img/anhtat3.jpg'})">Thêm Tất tím <img src="img/anhtat3.jpg" alt=""></button>
+
+      <button onclick="addToCart({name: 'Giày xanh', price: 100000, image: 'img/anhgiay1.jpg'})">Thêm Giày xanh <img src="img/anhgiay1.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Giày xám', price: 2000000, image: 'img/anhgiay2.jpg'})">Thêm Giày xám <img src="img/anhgiay2.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Giày đen', price: 30000000, image: 'img/anhgiay3.jpg'})">Thêm Giày đen <img src="img/anhgiay3.jpg" alt=""></button>
+
+      <button onclick="addToCart({name: 'Áo nữ 1', price: 10000, image: 'img/aonu1.jpg'})">Thêm Áo nữ 1 <img src="img/aonu1.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo nữ 2', price: 20000, image: 'img/aonu2.jpg'})">Thêm Áo nữ 2 <img src="img/aonu2.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo nữ 3', price: 30000, image: 'img/aonu3.jpg'})">Thêm Áo nữ 3<img src="img/aonu3.jpg" alt=""></button> 
+
+      <button onclick="addToCart({name: 'Áo xịn 1', price: 1000000, image: 'img/aoxin1.jpg'})">Thêm Áo xịn 1 <img src="img/aoxin1.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo xịn 2', price: 2000000, image: 'img/aoxin2.jpg'})">Thêm Áo xịn 2 <img src="img/aoxin2.jpg" alt=""></button>
+      <button onclick="addToCart({name: 'Áo xịn 3', price: 3000000, image: 'img/aoxin3.jpg'})">Thêm Áo xịn 3 <img src="img/aoxin3.jpg" alt=""></button>
+  </div>
+
+  <div id="cart-items"></div>
+  <div class="thanhtoan">
+    <div class="cart-total">Tổng: <span id="cart-total">0</span> VND</div>
+    <button onclick="thanhtoan()" class="comic-button">Thanh toán</button>
+    <div class="Trangthaihang"></div>
+  </div>
+  <div id="order-history"></div>
+  <footer class="footer-container">
+    <div class="footer-column">
+        <h3>SẢN PHẨM</h3>
+        <ul>
+            <li><a href="#"> Nam</a></li>
+            <li><a href="#"> Nữ</a></li>
+            <li><a href="#">Thời trang & Phụ kiện</a></li>
+            <li><a href="#">Sale-off</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>HỖ TRỢ</h3>
+        <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Bảo mật thông tin</a></li>
+            <li><a href="#">Chính sách chung</a></li>
+            <li><a href="#">Tra cứu đơn hàng</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>LIÊN HỆ</h3>
+        <ul>
+            <li><a href="#">Email góp ý</a></li>
+            <li><a href="#">Hotline</a></li>
+            <li>0819 470 836</li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>ĐĂNG KÝ NHẬN MAIL</h3>
+        <div class="subscribe-form">
+            <input type="email" placeholder="Nhập email của bạn">
+            <button>Send</button>
+        </div>
+    </div>
+</footer>
+<script src="Giohang.js"></script>
+</body>
+</html>
