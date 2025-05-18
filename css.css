@@ -1,0 +1,50 @@
+:root {
+  --main-color: #fa1a74;
+  --padding-size: 15px;
+  --font-size: px;
+}
+h1 {
+  color: var(--main-color);
+  font-size: var(--font-size);
+}
+
+button {
+  background-color: var(--main-color);
+  padding: var(--padding-size);
+  color: rgb(252, 252, 252);
+  border: 3px solid rgb(57, 141, 250);
+}
+
+.m{
+    margin: 0;
+}
+div{
+    margin-top: 10%;
+}
+
+h2::before{
+    content: "psseudo before";
+    color: rgb(62, 239, 165);
+}
+
+h2::after{
+    content: "After chat";
+    color: rgb(113, 113, 236);
+}
+
+.letter::first-letter{
+    color: rgb(150, 249, 20);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.line::first-line{
+    color: #8f29f5;
+    background-color: antiquewhite;
+    font-weight: bold;
+}
+
+.selection::selection{
+    background-color: rgb(77, 241, 12);
+    color: rgb(245, 21, 85);
+}
