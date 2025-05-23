@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản của tôi | CozaStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="myinfo.css" rel="stylesheet">
+    <style>
+        .logout-btn {
+            background: #fff;
+            border: 1.5px solid #e0e0e0;
+            color: #222;
+            font-weight: 600;
+            font-size: 1.08rem;
+            transition: background 0.18s, color 0.18s, border 0.18s;
+            margin-top: 10px !important;
+        }
+        .logout-btn:hover {
+            background: #f7f7f9;
+            color: #111;
+            border-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row g-3">
+            <div class="col-3 p-3 border" style="background:#f7f7f9;border-radius:16px;min-height:600px;">
+                <div class="d-flex flex-column gap-3">
+                    <a href="#v-pills-profile" class="d-flex align-items-center justify-content-between px-3 py-3 rounded-3 text-decoration-none sidebar-btn active" data-bs-target="#v-pills-profile" role="tab">
+                        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-user"></i> Thông tin tài khoản</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#v-pills-address" class="d-flex align-items-center justify-content-between px-3 py-3 rounded-3 text-decoration-none sidebar-btn" data-bs-target="#v-pills-address" role="tab">
+                        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-map-location-dot"></i> Sổ địa chỉ</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#v-pills-order-history" class="d-flex align-items-center justify-content-between px-3 py-3 rounded-3 text-decoration-none sidebar-btn" data-bs-target="#v-pills-order-history" role="tab">
+                        <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-bag-shopping"></i> Lịch sử đơn hàng</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="d-flex align-items-center justify-content-between px-3 py-3 rounded-3 text-decoration-none sidebar-btn" id="v-pills-logout" onclick="logout()" role="button">
+    <span class="d-flex align-items-center gap-2"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</span>
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+                </div>
+            </div>
+            <div class="col-9 p-3 border">
+                <div id="v-pills-profile-content">
+                    <div class="bg-light rounded-4 p-5" style="max-width:900px;margin:auto;box-shadow:0 2px 16px #0001;">
+                        <h2 class="fw-bold mb-5" style="font-size:2.3rem;">Thông tin tài khoản</h2>
+                        <form>
+                            <div class="row mb-3 align-items-center">
+                                <label class="col-md-4 col-12 col-form-label fs-5 fw-normal">Họ và tên</label>
+                                <div class="col-md-8 col-12 fs-5">King Of The River</div>
+                            </div>
+                            <div class="row mb-3 align-items-center">
+                                <label class="col-md-4 col-12 col-form-label fs-5 fw-normal">Số điện thoại</label>
+                                <div class="col-md-8 col-12 fs-5">0819470836</div>
+                            </div>
+                            <div class="row mb-3 align-items-center">
+                                <label class="col-md-4 col-12 col-form-label fs-5 fw-normal">Email</label>
+                                <div class="col-md-8 col-12 fs-5">kingriver@email.com</div>
+                            </div>
+                            <div class="row mb-3 align-items-center">
+                                <label class="col-md-4 col-12 col-form-label fs-5 fw-normal">Giới tính</label>
+                                <div class="col-md-8 col-12 fs-5 d-flex gap-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender-male" checked>
+                                        <label class="form-check-label" for="gender-male">Nam</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender-female">
+                                        <label class="form-check-label" for="gender-female">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                                <label class="col-md-4 col-12 col-form-label fs-5 fw-normal">Ngày sinh <span class="text-secondary" style="font-size:1rem;">(ngày/tháng/năm)</span></label>
+                                <div class="col-md-8 col-12 fs-5">
+                                    <input type="date" class="form-control" value="1995-05-10">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8">
+                                    <button type="button" class="btn btn-outline-dark rounded-pill px-5 py-2 fs-4 fw-bold">CẬP NHẬT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="v-pills-address-content" style="display:none;">
+                    <div class="address-coolmate-wrap p-4" style="background:#fff;border-radius:22px;max-width:700px;margin:auto;box-shadow:0 2px 16px #0002;">
+                        <h2 class="fw-bold mb-4" style="font-size:2.1rem;">Địa chỉ của tôi</h2>
+                        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                            <div class="fs-5 fw-bold">Sổ địa chỉ</div>
+                            <button class="btn btn-dark rounded-pill px-4 py-2 fw-bold" style="font-size:1.1rem;" id="addAddressBtn" data-bs-toggle="modal" data-bs-target="#addressModal">THÊM ĐỊA CHỈ MỚI</button>
+                        </div>
+                        <hr>
+                        <div class="address-list-coolmate">
+                            <div class="address-item-coolmate d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2 py-3 px-2 mb-3" style="border-bottom:1px solid #eee;">
+                                <div class="address-info flex-grow-1">
+                                    <span class="fw-bold">King Of The River</span>
+                                    <span class="badge bg-light border border-dark text-dark ms-2" style="font-size:1rem;"><i class="fa-solid fa-star me-1"></i>Mặc định</span>
+                                    <div class="text-secondary mt-1 mb-1">0819470836</div>
+                                    <div class="text-secondary">ngõ 499 đường LNQ, Phường Phan Đình Phùng, Thành phố Thái Nguyên, Thái Nguyên</div>
+                                </div>
+                                <div class="address-actions d-flex flex-nowrap align-items-center gap-2 ms-md-3">
+                                    <a href="#" class="text-primary fw-bold text-decoration-none edit-address-btn d-inline-block" style="min-width:80px;text-align:center;" data-bs-toggle="modal" data-bs-target="#addressModal"
+                                        data-name="King Of The River" data-phone="0819470836" data-address="ngõ 499 đường LNQ, Phường Phan Đình Phùng, Thành phố Thái Nguyên, Thái Nguyên" data-default="true">Cập nhật</a>
+                                    <span class="text-muted">|</span>
+                                    <a href="#" class="text-danger fw-bold text-decoration-none d-inline-block" style="min-width:50px;text-align:center;">Xoá</a>
+                                </div>
+                            </div>
+                            <!-- Thêm các địa chỉ khác tương tự ở đây nếu có -->
+                        </div>
+                    </div>
+                    <!-- Modal Thêm/Sửa Địa Chỉ -->
+                    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content rounded-4 p-2 p-md-4">
+                          <div class="modal-header border-0 pb-0">
+                            <h2 class="modal-title w-100 text-center fw-bold mb-0" id="addressModalLabel" style="font-size:2.2rem;">Thêm địa chỉ mới</h2>
+                            <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Đóng" style="font-size:1.5rem;"></button>
+                          </div>
+                          <form id="addressForm">
+                            <div class="modal-body pt-2">
+                              <div class="mb-3">
+                                <label class="form-label fw-semibold">Họ và tên</label>
+                                <input type="text" class="form-control rounded-pill" id="inputName" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label fw-semibold">Số điện thoại</label>
+                                <input type="text" class="form-control rounded-pill" id="inputPhone" required>
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label fw-semibold">Địa chỉ</label>
+                                <input type="text" class="form-control rounded-pill" id="inputAddress" required>
+                              </div>
+                              <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="defaultAddress">
+                                <label class="form-check-label" for="defaultAddress">Đặt làm địa chỉ mặc định</label>
+                              </div>
+                            </div>
+                            <div class="modal-footer border-0 pt-0 pb-4 d-flex justify-content-center">
+                              <button type="submit" class="btn btn-dark rounded-pill px-5 py-2 fs-5 fw-bold w-100" style="max-width:400px;">LƯU ĐỊA CHỈ <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div id="v-pills-order-history-content" style="display:none;">
+                    <iframe src="order-history.html" style="width:100%;min-height:600px;border:none;" title="Lịch sử đơn hàng"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cập nhật thông tin tài khoản kiểu Coolmate (đã bỏ bật đăng nhập bằng SĐT) -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-2 p-md-4">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title w-100 text-center fw-bold mb-0" id="editProfileModalLabel" style="font-size:2.2rem;">Chỉnh sửa thông tin tài khoản</h2>
+                    <button type="button" class="btn-close position-absolute end-0 me-3 mt-3" data-bs-dismiss="modal" aria-label="Đóng" style="font-size:1.5rem;"></button>
+                </div>
+                <form id="editProfileForm">
+                    <div class="modal-body pt-2">
+                        <div class="row g-3">
+                            <div class="col-12 mb-2">
+                                <label class="form-label small mb-1 ms-1">Họ tên của bạn</label>
+                                <div class="input-group input-group-lg rounded-pill">
+                                    <span class="input-group-text bg-white border-0 ps-3"><i class="fa-solid fa-user"></i></span>
+                                    <input type="text" class="form-control rounded-pill border-0 bg-light" id="editFullName" value="King Of The River" placeholder="Họ tên của bạn">
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label class="form-label small mb-1 ms-1">Ngày sinh</label>
+                                <div class="d-flex gap-2">
+                                    <select class="form-select rounded-pill bg-light border-0" style="max-width:110px;" id="editBirthDay">
+                                        <option>Ngày</option>
+                                    </select>
+                                    <select class="form-select rounded-pill bg-light border-0" style="max-width:110px;" id="editBirthMonth">
+                                        <option>Tháng</option>
+                                    </select>
+                                    <select class="form-select rounded-pill bg-light border-0" style="max-width:110px;" id="editBirthYear">
+                                        <option>Năm</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label class="form-label small mb-1 ms-1">Giới tính</label>
+                                <div class="d-flex gap-4 align-items-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="editGender" id="editGenderMale" value="Nam" checked>
+                                        <label class="form-check-label" for="editGenderMale">Nam</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="editGender" id="editGenderFemale" value="Nữ">
+                                        <label class="form-check-label" for="editGenderFemale">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label class="form-label small mb-1 ms-1">Số điện thoại</label>
+                                <div class="input-group input-group-lg rounded-pill">
+                                    <span class="input-group-text bg-white border-0 ps-3"><i class="fa-solid fa-phone"></i></span>
+                                    <input type="text" class="form-control rounded-pill border-0 bg-light" id="editPhone" value="0819470836" placeholder="Số điện thoại">
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label class="form-label small mb-1 ms-1">Email</label>
+                                <div class="input-group input-group-lg rounded-pill">
+                                    <span class="input-group-text bg-white border-0 ps-3"><i class="fa-solid fa-envelope"></i></span>
+                                    <input type="email" class="form-control rounded-pill border-0 bg-light" id="editEmail" value="kingriver@email.com" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 pt-0 pb-4 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-dark rounded-pill px-5 py-2 fs-5 fw-bold w-100" style="max-width:400px;">
+                            CẬP NHẬT TÀI KHOẢN <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Sidebar tab effect (không dùng tab Bootstrap tab, show/hide thủ công)
+    const sidebarBtns = document.querySelectorAll('.sidebar-btn');
+    const tabContents = {
+        'v-pills-profile': document.getElementById('v-pills-profile-content'),
+        'v-pills-address': document.getElementById('v-pills-address-content'),
+        'v-pills-order-history': document.getElementById('v-pills-order-history-content')
+    };
+    sidebarBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            sidebarBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            Object.values(tabContents).forEach(c => c.style.display = 'none');
+            const target = btn.getAttribute('data-bs-target').replace('#','');
+            if(tabContents[target]) tabContents[target].style.display = '';
+        });
+    });
+
+    // Hiện modal khi bấm nút CẬP NHẬT (fix lỗi không hiện modal nếu chưa có bootstrap.Modal)
+    document.addEventListener('DOMContentLoaded', function() {
+        const updateBtn = document.querySelector('.btn-outline-dark.rounded-pill');
+        if (updateBtn) {
+            updateBtn.addEventListener('click', function() {
+                // Đảm bảo Bootstrap Modal đã được load
+                if (window.bootstrap && bootstrap.Modal) {
+                    const modal = new bootstrap.Modal(document.getElementById('editProfileModal'));
+                    modal.show();
+                } else {
+                    // Nếu chưa có bootstrap.Modal, load lại trang hoặc báo lỗi
+                    alert('Không tìm thấy Bootstrap Modal. Hãy kiểm tra lại import Bootstrap JS!');
+                }
+            });
+        }
+    });
+
+    // Đóng modal khi submit (bạn có thể thêm xử lý lưu thực tế ở đây)
+    document.getElementById('editProfileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        bootstrap.Modal.getInstance(document.getElementById('editProfileModal')).hide();
+        // TODO: Xử lý lưu dữ liệu thực tế
+    });
+
+    // Tạo option ngày/tháng/năm động
+    window.addEventListener('DOMContentLoaded', () => {
+        const daySel = document.getElementById('editBirthDay');
+        const monthSel = document.getElementById('editBirthMonth');
+        const yearSel = document.getElementById('editBirthYear');
+        if(daySel && monthSel && yearSel) {
+            for(let i=1;i<=31;i++) daySel.innerHTML += `<option value="${i}">${i}</option>`;
+            for(let i=1;i<=12;i++) monthSel.innerHTML += `<option value="${i}">${i}</option>`;
+            for(let i=2025;i>=1950;i--) yearSel.innerHTML += `<option value="${i}">${i}</option>`;
+        }
+    });
+
+    </script>
+    <!-- Import Bootstrap JS để modal hoạt động -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
